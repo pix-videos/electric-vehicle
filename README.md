@@ -89,10 +89,8 @@ MIT License - feel free to use this for educational purposes.
 
 ## 🙏 Credits
 
-### 3D Models (from [Poly Pizza](https://poly.pizza))
-- **Car Battery**: [J-Toastie](https://poly.pizza/u/J-Toastie) (CC BY)
-- **Gear/Motor**: [Poly by Google](https://poly.pizza/u/Poly%20by%20Google) (CC BY)
-- **Tires**: [Quaternius](https://poly.pizza/u/Quaternius) (CC0 - Public Domain)
+### 3D Models
+- Sample models from [Model-Viewer Examples](https://modelviewer.dev/) (Apache 2.0 License)
 
 ### Other Assets
 - **Hero Image**: [Rob Wingate on Unsplash](https://unsplash.com/@robwingate) - Jaguar Type 00 Concept
