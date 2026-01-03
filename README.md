@@ -64,7 +64,7 @@ The interface features a cyberpunk/high-tech aesthetic with:
 
 ### Adding Your Own 3D Models
 
-Replace the placeholder model URLs in `script.js` with your own `.glb` or `.gltf` files:
+Replace the model URLs in `script.js` with your own `.glb` or `.gltf` files:
 
 ```javascript
 const componentData = {
@@ -77,6 +77,7 @@ const componentData = {
 
 ### Free 3D Model Sources
 
+- [Poly Pizza](https://poly.pizza) - Free low-poly models (CC0/CC-BY)
 - [Sketchfab](https://sketchfab.com) - Many free CC-licensed models
 - [TurboSquid](https://turbosquid.com) - Free section available
 - [Free3D](https://free3d.com) - Various free models
@@ -88,7 +89,12 @@ MIT License - feel free to use this for educational purposes.
 
 ## 🙏 Credits
 
-- 3D Models: Placeholder models from [Model-Viewer Examples](https://modelviewer.dev/)
-- Fonts: [Google Fonts](https://fonts.google.com/)
-- Hero Image: [Rob Wingate on Unsplash](https://unsplash.com/@robwingate) - Jaguar Type 00 Concept
+### 3D Models (from [Poly Pizza](https://poly.pizza))
+- **Car Battery**: [J-Toastie](https://poly.pizza/u/J-Toastie) (CC BY)
+- **Gear/Motor**: [Poly by Google](https://poly.pizza/u/Poly%20by%20Google) (CC BY)
+- **Tires**: [Quaternius](https://poly.pizza/u/Quaternius) (CC0 - Public Domain)
+
+### Other Assets
+- **Hero Image**: [Rob Wingate on Unsplash](https://unsplash.com/@robwingate) - Jaguar Type 00 Concept
+- **Fonts**: [Google Fonts](https://fonts.google.com/) (Orbitron, Rajdhani)
 

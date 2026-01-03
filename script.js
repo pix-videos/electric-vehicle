@@ -8,7 +8,7 @@ const componentData = {
     battery: {
         number: '01',
         title: 'Lithium-Ion Battery Pack',
-        model: 'https://modelviewer.dev/shared-assets/models/Astronaut.glb', // Placeholder - replace with actual battery model
+        model: 'https://static.poly.pizza/b99e4594-bcaa-4096-9d6f-4793c0f241b5.glb', // Car Battery model by J-Toastie (CC BY)
         description: 'The battery pack is the heart of every electric vehicle, storing the electrical energy that powers the motor. Modern EV batteries use lithium-ion technology arranged in thousands of individual cells, connected in series and parallel to achieve the desired voltage and capacity.',
         specs: [
             'Capacity: 75-100 kWh (typical long-range EV)',
@@ -28,7 +28,7 @@ const componentData = {
     motor: {
         number: '02',
         title: 'Electric Motor',
-        model: 'https://modelviewer.dev/shared-assets/models/RobotExpressive.glb', // Placeholder - replace with actual motor model
+        model: 'https://static.poly.pizza/941cc901-0994-4d3c-bf19-9ff09a5f96d1.glb', // Gear model by Poly by Google (CC BY)
         description: 'Electric motors convert electrical energy into mechanical rotation with remarkable efficiency. Unlike combustion engines with hundreds of moving parts, electric motors have just one moving component—the rotor. This simplicity means fewer maintenance requirements and instant torque delivery.',
         specs: [
             'Type: Permanent Magnet Synchronous Motor (PMSM)',
@@ -48,7 +48,7 @@ const componentData = {
     braking: {
         number: '03',
         title: 'Regenerative Braking System',
-        model: 'https://modelviewer.dev/shared-assets/models/MaterialsVariantsShoe.glb', // Placeholder - replace with actual brake model
+        model: 'https://static.poly.pizza/a90102e9-2031-4a96-a3f2-4d34db1876dd.glb', // Tires model by Quaternius (CC0)
         description: 'Regenerative braking is a revolutionary technology that captures kinetic energy during deceleration and converts it back to electrical energy stored in the battery. When you lift off the accelerator or apply the brakes, the motor reverses its function, becoming a generator.',
         specs: [
             'Energy Recovery: Up to 70% of kinetic energy',
