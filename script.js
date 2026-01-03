@@ -1,0 +1,201 @@
+/**
+ * Electric Vehicle Technology Explorer
+ * Interactive 3D component viewer
+ */
+
+// Component data with 3D models and information
+const componentData = {
+    battery: {
+        number: '01',
+        title: 'Lithium-Ion Battery Pack',
+        model: 'https://modelviewer.dev/shared-assets/models/Astronaut.glb', // Placeholder - replace with actual battery model
+        description: 'The battery pack is the heart of every electric vehicle, storing the electrical energy that powers the motor. Modern EV batteries use lithium-ion technology arranged in thousands of individual cells, connected in series and parallel to achieve the desired voltage and capacity.',
+        specs: [
+            'Capacity: 75-100 kWh (typical long-range EV)',
+            'Voltage: 350-800V nominal',
+            'Chemistry: NMC (Nickel Manganese Cobalt) or LFP (Lithium Iron Phosphate)',
+            'Weight: 400-700 kg',
+            'Thermal Management: Liquid cooling system',
+            'Cycle Life: 1,500-3,000 full charge cycles'
+        ],
+        facts: [
+            { value: '300+', label: 'Mile Range' },
+            { value: '8yr', label: 'Warranty' },
+            { value: '15min', label: 'Fast Charge' },
+            { value: '97%', label: 'Efficiency' }
+        ]
+    },
+    motor: {
+        number: '02',
+        title: 'Electric Motor',
+        model: 'https://modelviewer.dev/shared-assets/models/RobotExpressive.glb', // Placeholder - replace with actual motor model
+        description: 'Electric motors convert electrical energy into mechanical rotation with remarkable efficiency. Unlike combustion engines with hundreds of moving parts, electric motors have just one moving component—the rotor. This simplicity means fewer maintenance requirements and instant torque delivery.',
+        specs: [
+            'Type: Permanent Magnet Synchronous Motor (PMSM)',
+            'Power Output: 150-400 kW peak',
+            'Torque: 300-600 Nm instant',
+            'Efficiency: 95-97%',
+            'RPM Range: 0-18,000 rpm',
+            'Cooling: Integrated liquid cooling'
+        ],
+        facts: [
+            { value: '0-60', label: '3.5 seconds' },
+            { value: '1', label: 'Moving Part' },
+            { value: '95%', label: 'Efficiency' },
+            { value: '∞', label: 'Instant Torque' }
+        ]
+    },
+    braking: {
+        number: '03',
+        title: 'Regenerative Braking System',
+        model: 'https://modelviewer.dev/shared-assets/models/MaterialsVariantsShoe.glb', // Placeholder - replace with actual brake model
+        description: 'Regenerative braking is a revolutionary technology that captures kinetic energy during deceleration and converts it back to electrical energy stored in the battery. When you lift off the accelerator or apply the brakes, the motor reverses its function, becoming a generator.',
+        specs: [
+            'Energy Recovery: Up to 70% of kinetic energy',
+            'Blended Braking: Combines regen with friction brakes',
+            'One-Pedal Driving: Adjustable regeneration levels',
+            'Range Extension: 10-25% additional range in city driving',
+            'Brake Wear Reduction: Up to 50% less brake pad wear',
+            'Control: Paddle shifters or drive mode selection'
+        ],
+        facts: [
+            { value: '70%', label: 'Energy Captured' },
+            { value: '+25%', label: 'Range Boost' },
+            { value: '50%', label: 'Less Brake Wear' },
+            { value: '1-pedal', label: 'Driving Mode' }
+        ]
+    }
+};
+
+// DOM Elements
+const modal = document.getElementById('componentModal');
+const modalClose = document.querySelector('.modal-close');
+const viewer = document.getElementById('componentViewer');
+const hotspots = document.querySelectorAll('.hotspot');
+const rotateToggle = document.getElementById('rotateToggle');
+const resetViewBtn = document.getElementById('resetView');
+
+// Current state
+let currentComponent = null;
+
+// Initialize
+document.addEventListener('DOMContentLoaded', () => {
+    setupHotspots();
+    setupModalControls();
+    setupViewerControls();
+});
+
+// Setup hotspot click handlers
+function setupHotspots() {
+    hotspots.forEach(hotspot => {
+        hotspot.addEventListener('click', () => {
+            const componentId = hotspot.dataset.component;
+            openComponentModal(componentId);
+        });
+    });
+}
+
+// Open modal with component details
+function openComponentModal(componentId) {
+    const data = componentData[componentId];
+    if (!data) return;
+    
+    currentComponent = componentId;
+    
+    // Update modal content
+    document.getElementById('componentNumber').textContent = data.number;
+    document.getElementById('componentTitle').textContent = data.title;
+    document.getElementById('componentDescription').textContent = data.description;
+    
+    // Update specs
+    const specsList = document.getElementById('componentSpecs');
+    specsList.innerHTML = data.specs.map(spec => `<li>${spec}</li>`).join('');
+    
+    // Update facts
+    const factsGrid = document.getElementById('componentFacts');
+    factsGrid.innerHTML = data.facts.map(fact => `
+        <div class="fact-card">
+            <span class="fact-value">${fact.value}</span>
+            <span class="fact-label">${fact.label}</span>
+        </div>
+    `).join('');
+    
+    // Load 3D model
+    viewer.src = data.model;
+    
+    // Show modal
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+// Close modal
+function closeModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+    currentComponent = null;
+}
+
+// Setup modal close handlers
+function setupModalControls() {
+    modalClose.addEventListener('click', closeModal);
+    
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+    
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+}
+
+// Setup 3D viewer controls
+function setupViewerControls() {
+    // Toggle auto-rotate
+    rotateToggle.addEventListener('click', () => {
+        const isRotating = viewer.hasAttribute('auto-rotate');
+        if (isRotating) {
+            viewer.removeAttribute('auto-rotate');
+            rotateToggle.classList.remove('active');
+        } else {
+            viewer.setAttribute('auto-rotate', '');
+            rotateToggle.classList.add('active');
+        }
+    });
+    
+    // Set initial state
+    rotateToggle.classList.add('active');
+    
+    // Reset view
+    resetViewBtn.addEventListener('click', () => {
+        viewer.cameraOrbit = 'auto auto auto';
+        viewer.cameraTarget = 'auto auto auto';
+        viewer.fieldOfView = 'auto';
+    });
+    
+    // Handle model load events
+    viewer.addEventListener('load', () => {
+        console.log('Model loaded successfully');
+    });
+    
+    viewer.addEventListener('error', (e) => {
+        console.error('Error loading model:', e);
+    });
+}
+
+// Add keyboard navigation for hotspots
+document.addEventListener('keydown', (e) => {
+    if (modal.classList.contains('active')) return;
+    
+    const keys = ['1', '2', '3'];
+    const components = ['battery', 'motor', 'braking'];
+    
+    const index = keys.indexOf(e.key);
+    if (index !== -1) {
+        openComponentModal(components[index]);
+    }
+});
+

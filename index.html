@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Vehicle Technology Explorer</title>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="circuit-bg"></div>
+    
+    <header>
+        <div class="logo">
+            <span class="logo-icon">⚡</span>
+            <span class="logo-text">EV<span class="accent">Tech</span></span>
+        </div>
+        <h1>Electric Vehicle Technology Explorer</h1>
+        <p class="subtitle">Discover the core components powering the future of transportation</p>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="ev-image-container">
+                <img src="assets/ev-cutaway.svg" alt="Electric Vehicle Cutaway" class="ev-image">
+                
+                <!-- Hotspot 1: Battery Pack -->
+                <button class="hotspot hotspot-battery" data-component="battery" aria-label="View Battery Pack">
+                    <span class="hotspot-pulse"></span>
+                    <span class="hotspot-icon">1</span>
+                    <span class="hotspot-label">Battery Pack</span>
+                </button>
+                
+                <!-- Hotspot 2: Electric Motor -->
+                <button class="hotspot hotspot-motor" data-component="motor" aria-label="View Electric Motor">
+                    <span class="hotspot-pulse"></span>
+                    <span class="hotspot-icon">2</span>
+                    <span class="hotspot-label">Electric Motor</span>
+                </button>
+                
+                <!-- Hotspot 3: Regenerative Braking -->
+                <button class="hotspot hotspot-braking" data-component="braking" aria-label="View Regenerative Braking">
+                    <span class="hotspot-pulse"></span>
+                    <span class="hotspot-icon">3</span>
+                    <span class="hotspot-label">Regen Braking</span>
+                </button>
+            </div>
+            
+            <div class="instructions">
+                <div class="instruction-icon">👆</div>
+                <p>Click on the glowing hotspots to explore each component in 3D</p>
+            </div>
+        </section>
+
+        <!-- Component Detail Modal -->
+        <div class="modal" id="componentModal">
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Close">&times;</button>
+                
+                <div class="modal-grid">
+                    <div class="model-container">
+                        <model-viewer
+                            id="componentViewer"
+                            camera-controls
+                            auto-rotate
+                            shadow-intensity="1"
+                            exposure="0.8"
+                            environment-image="neutral"
+                            alt="3D Component Model"
+                        >
+                            <div class="model-loading">
+                                <div class="loader"></div>
+                                <p>Loading 3D Model...</p>
+                            </div>
+                        </model-viewer>
+                        
+                        <div class="model-controls">
+                            <button class="control-btn" id="rotateToggle" title="Toggle Auto-Rotate">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 6v3l4-4-4-4v3c-4.42 0-8 3.58-8 8 0 1.57.46 3.03 1.24 4.26L6.7 14.8c-.45-.83-.7-1.79-.7-2.8 0-3.31 2.69-6 6-6zm6.76 1.74L17.3 9.2c.44.84.7 1.79.7 2.8 0 3.31-2.69 6-6 6v-3l-4 4 4 4v-3c4.42 0 8-3.58 8-8 0-1.57-.46-3.03-1.24-4.26z"/></svg>
+                            </button>
+                            <button class="control-btn" id="resetView" title="Reset View">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="component-info">
+                        <div class="component-header">
+                            <span class="component-number" id="componentNumber">01</span>
+                            <h2 id="componentTitle">Component Name</h2>
+                        </div>
+                        
+                        <div class="component-body">
+                            <p class="component-description" id="componentDescription">
+                                Component description will appear here.
+                            </p>
+                            
+                            <div class="specs-container">
+                                <h3>Technical Specifications</h3>
+                                <ul class="specs-list" id="componentSpecs">
+                                    <!-- Specs will be populated dynamically -->
+                                </ul>
+                            </div>
+                            
+                            <div class="facts-container">
+                                <h3>Key Facts</h3>
+                                <div class="facts-grid" id="componentFacts">
+                                    <!-- Facts will be populated dynamically -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Interactive EV Technology Explorer | Built with Google Model-Viewer</p>
+        <p class="credits">3D Models from <a href="https://sketchfab.com" target="_blank">Sketchfab</a> (CC Licensed)</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
