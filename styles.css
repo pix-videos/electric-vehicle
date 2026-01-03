@@ -138,7 +138,9 @@ main {
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 12px;
     filter: drop-shadow(0 0 30px rgba(0, 240, 255, 0.3));
+    object-fit: cover;
 }
 
 /* Hotspots */
@@ -211,20 +213,21 @@ main {
     opacity: 1;
 }
 
-/* Hotspot Positions */
+/* Hotspot Positions - adjusted for Jaguar Type 00 Concept image */
 .hotspot-battery {
-    bottom: 35%;
-    left: 45%;
+    bottom: 25%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .hotspot-motor {
-    bottom: 30%;
-    right: 20%;
+    bottom: 35%;
+    right: 25%;
 }
 
 .hotspot-braking {
-    bottom: 25%;
-    left: 20%;
+    bottom: 30%;
+    left: 22%;
 }
 
 /* Instructions */

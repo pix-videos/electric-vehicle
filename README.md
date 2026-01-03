@@ -48,8 +48,7 @@ electric-vehicle/
 ├── index.html          # Main HTML file
 ├── styles.css          # Cyberpunk-themed styles
 ├── script.js           # Interactive functionality
-├── assets/
-│   └── ev-cutaway.svg  # EV illustration with hotspot areas
+├── assets/             # (Optional) Local assets
 └── README.md           # This file
 ```
 
@@ -91,5 +90,5 @@ MIT License - feel free to use this for educational purposes.
 
 - 3D Models: Placeholder models from [Model-Viewer Examples](https://modelviewer.dev/)
 - Fonts: [Google Fonts](https://fonts.google.com/)
-- Icons: Custom SVG
+- Hero Image: [Rob Wingate on Unsplash](https://unsplash.com/@robwingate) - Jaguar Type 00 Concept
 
