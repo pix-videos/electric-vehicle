@@ -47,22 +47,22 @@ const componentData = {
     },
     braking: {
         number: '03',
-        title: 'Regenerative Braking System',
-        model: './models/braking.glb', // Place your braking system GLB model in the models/ folder
-        description: 'Regenerative braking is a revolutionary technology that captures kinetic energy during deceleration and converts it back to electrical energy stored in the battery. When you lift off the accelerator or apply the brakes, the motor reverses its function, becoming a generator.',
+        title: 'EV Tires',
+        model: './models/3d-tire.glb',
+        description: 'Electric vehicle tires are specifically engineered to handle the unique demands of EVs. They must support heavier vehicle weights due to battery packs, provide low rolling resistance for maximum range, and deliver exceptional grip for instant torque delivery. Advanced compounds and tread patterns optimize efficiency while maintaining safety and performance.',
         specs: [
-            'Energy Recovery: Up to 70% of kinetic energy',
-            'Blended Braking: Combines regen with friction brakes',
-            'One-Pedal Driving: Adjustable regeneration levels',
-            'Range Extension: 10-25% additional range in city driving',
-            'Brake Wear Reduction: Up to 50% less brake pad wear',
-            'Control: Paddle shifters or drive mode selection'
+            'Low Rolling Resistance: 20-30% better than standard tires',
+            'Load Capacity: Designed for heavier EV weight distribution',
+            'Tread Pattern: Optimized for efficiency and wet grip',
+            'Compound: Specialized rubber for reduced energy loss',
+            'Noise Reduction: Quieter operation for silent EV experience',
+            'Durability: Extended lifespan despite higher torque loads'
         ],
         facts: [
-            { value: '70%', label: 'Energy Captured' },
-            { value: '+25%', label: 'Range Boost' },
-            { value: '50%', label: 'Less Brake Wear' },
-            { value: '1-pedal', label: 'Driving Mode' }
+            { value: '30%', label: 'Less Resistance' },
+            { value: '+5%', label: 'Range Boost' },
+            { value: '50K', label: 'Miles Lifespan' },
+            { value: 'EV', label: 'Optimized' }
         ]
     }
 };

@@ -21,7 +21,7 @@ This interactive web application allows users to explore the key technologies th
 
 1. **Lithium-Ion Battery Pack** - The energy storage heart of the EV
 2. **Electric Motor** - High-efficiency permanent magnet motor
-3. **Regenerative Braking System** - Energy recovery during deceleration
+3. **EV Tires** - Specially engineered tires for electric vehicles
 
 ## 🛠️ Technologies Used
 
