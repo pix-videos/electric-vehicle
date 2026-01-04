@@ -335,18 +335,21 @@ main {
 
 @media (max-width: 900px) {
     .modal {
-        padding: 0.5rem;
+        padding: 1rem;
         align-items: flex-start;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
     
     .modal-content {
-        max-height: calc(100vh - 4rem);
+        max-height: calc(100vh - 2rem);
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
         width: 100%;
-        margin: auto;
+        margin: 0;
+        margin-bottom: 1rem;
     }
     
     .modal-grid {
