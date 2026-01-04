@@ -290,6 +290,8 @@ main {
     transform: scale(0.9) translateY(20px);
     transition: transform 0.4s ease;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .modal.active .modal-content {
@@ -326,12 +328,20 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 80vh;
+    min-height: 0;
 }
 
 @media (max-width: 900px) {
+    .modal-content {
+        max-height: 95vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
     .modal-grid {
         grid-template-columns: 1fr;
         height: auto;
+        min-height: auto;
     }
 }
 
@@ -422,6 +432,14 @@ model-viewer[loaded] .model-loading {
     padding: 2rem;
     overflow-y: auto;
     max-height: 80vh;
+    -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 900px) {
+    .component-info {
+        max-height: none;
+        overflow-y: visible;
+    }
 }
 
 .component-header {
