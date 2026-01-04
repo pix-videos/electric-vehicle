@@ -133,16 +133,21 @@ function openComponentModal(componentId) {
     viewer.setAttribute('auto-rotate', '');
     viewer.setAttribute('auto-rotate-delay', '0');
     
-    // Adjust camera for tire model to show it smaller
-    if (componentId === 'braking') {
-        // Set camera further back for tire model
-        viewer.cameraOrbit = 'auto 75deg auto';
-        viewer.fieldOfView = '45deg';
-    } else {
-        // Reset to default for other models
-        viewer.cameraOrbit = 'auto auto auto';
-        viewer.fieldOfView = 'auto';
-    }
+    // Adjust camera for tire model to show it smaller after load
+    const adjustCameraForTire = () => {
+        if (componentId === 'braking') {
+            // Set camera further back for tire model (smaller appearance)
+            viewer.cameraOrbit = 'auto 75deg auto';
+            viewer.fieldOfView = '45deg';
+        } else {
+            // Reset to default for other models
+            viewer.cameraOrbit = 'auto auto auto';
+            viewer.fieldOfView = 'auto';
+        }
+    };
+    
+    // Adjust camera when model loads
+    viewer.addEventListener('load', adjustCameraForTire, { once: true });
     
     // Show modal
     modal.classList.add('active');
