@@ -165,9 +165,11 @@ function setupViewerControls() {
         const isRotating = viewer.hasAttribute('auto-rotate');
         if (isRotating) {
             viewer.removeAttribute('auto-rotate');
+            viewer.removeAttribute('auto-rotate-delay');
             rotateToggle.classList.remove('active');
         } else {
             viewer.setAttribute('auto-rotate', '');
+            viewer.setAttribute('auto-rotate-delay', '0');
             rotateToggle.classList.add('active');
         }
     });
