@@ -45,7 +45,7 @@ const componentData = {
             { value: '∞', label: 'Instant Torque' }
         ]
     },
-    braking: {
+    tire: {
         number: '03',
         title: 'EV Tires',
         model: './models/3d-tire.glb',
@@ -223,7 +223,7 @@ document.addEventListener('keydown', (e) => {
     if (modal.classList.contains('active')) return;
     
     const keys = ['1', '2', '3'];
-    const components = ['suspension', 'motor', 'braking'];
+    const components = ['suspension', 'motor', 'tire'];
     
     const index = keys.indexOf(e.key);
     if (index !== -1) {

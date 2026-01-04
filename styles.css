@@ -215,7 +215,7 @@ main {
 
 /* Hotspot Positions - adjusted for EV cutaway diagram */
 /* Hotspot 1: Car Suspension - bottom of the car (floor/chassis area) */
-.hotspot-battery {
+.hotspot-suspension {
     left: 70;
     bottom: 37%;
 }
@@ -227,7 +227,7 @@ main {
 }
 
 /* Hotspot 3: EV Tires - front wheel */
-.hotspot-braking {
+.hotspot-tire {
     left: 48%;
     bottom: 27%;
 }
