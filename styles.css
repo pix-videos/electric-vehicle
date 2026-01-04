@@ -216,7 +216,7 @@ main {
 /* Hotspot Positions - adjusted for EV cutaway diagram */
 /* Hotspot 1: Car Suspension - bottom of the car (floor/chassis area) */
 .hotspot-suspension {
-    left: 70;
+    left: 70%;
     bottom: 37%;
 }
 
