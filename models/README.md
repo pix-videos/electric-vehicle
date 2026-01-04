@@ -4,7 +4,7 @@ Place your GLB model files in this directory. The following models are needed:
 
 ## Required Models
 
-1. **battery.glb** - Lithium-ion battery pack model
+1. **3d-car-suspension.glb** - Car suspension system model
 2. **3d-electric-motor.glb** - Electric motor model  
 3. **3d-tire.glb** - EV tire model
 
@@ -12,8 +12,8 @@ Place your GLB model files in this directory. The following models are needed:
 
 ### Free Models (CC0/CC-BY Licensed)
 
-1. **Sketchfab** - Search for "battery", "electric motor", "tire" models
-   - https://sketchfab.com/search?q=battery&type=models&features=downloadable&sort_by=-likeCount
+1. **Sketchfab** - Search for "suspension", "electric motor", "tire" models
+   - https://sketchfab.com/search?q=suspension&type=models&features=downloadable&sort_by=-likeCount
    - https://sketchfab.com/search?q=electric+motor&type=models&features=downloadable
    - https://sketchfab.com/search?q=tire+wheel&type=models&features=downloadable
 

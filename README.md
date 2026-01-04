@@ -19,7 +19,7 @@ This interactive web application allows users to explore the key technologies th
 
 ## 🔋 Components Explored
 
-1. **Lithium-Ion Battery Pack** - The energy storage heart of the EV
+1. **Car Suspension System** - Engineered suspension for EV weight and performance
 2. **Electric Motor** - High-efficiency permanent magnet motor
 3. **EV Tires** - Specially engineered tires for electric vehicles
 
@@ -68,8 +68,8 @@ Replace the model URLs in `script.js` with your own `.glb` or `.gltf` files:
 
 ```javascript
 const componentData = {
-    battery: {
-        model: 'path/to/your/battery-model.glb',
+    suspension: {
+        model: 'path/to/your/suspension-model.glb',
         // ...
     }
 };
@@ -91,9 +91,9 @@ MIT License - feel free to use this for educational purposes.
 
 ### 3D Models
 - **Required Models:** Place GLB files in the `models/` folder:
-  - `battery.glb` - Lithium-ion battery pack
-  - `motor.glb` - Electric motor
-  - `braking.glb` - Regenerative braking system
+  - `3d-car-suspension.glb` - Car suspension system
+  - `3d-electric-motor.glb` - Electric motor
+  - `3d-tire.glb` - EV tire
 - **Download Guide:** See `models/README.md` for recommended sources and download instructions
 - **License:** Use CC0 or CC-BY licensed models (see download guide for sources)
 

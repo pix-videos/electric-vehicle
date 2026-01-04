@@ -5,24 +5,24 @@
 
 // Component data with 3D models and information
 const componentData = {
-    battery: {
+    suspension: {
         number: '01',
-        title: 'Lithium-Ion Battery Pack',
-        model: './models/battery.glb', // Place your battery GLB model in the models/ folder
-        description: 'The battery pack is the heart of every electric vehicle, storing the electrical energy that powers the motor. Modern EV batteries use lithium-ion technology arranged in thousands of individual cells, connected in series and parallel to achieve the desired voltage and capacity.',
+        title: 'Car Suspension System',
+        model: './models/3d-car-suspension.glb',
+        description: 'The suspension system is crucial for electric vehicles, managing the increased weight from battery packs while maintaining ride comfort and handling. EV suspensions are engineered to handle higher loads, provide optimal weight distribution, and ensure smooth operation. Advanced systems use adaptive dampers and air suspension to automatically adjust for varying loads and road conditions.',
         specs: [
-            'Capacity: 75-100 kWh (typical long-range EV)',
-            'Voltage: 350-800V nominal',
-            'Chemistry: NMC (Nickel Manganese Cobalt) or LFP (Lithium Iron Phosphate)',
-            'Weight: 400-700 kg',
-            'Thermal Management: Liquid cooling system',
-            'Cycle Life: 1,500-3,000 full charge cycles'
+            'Type: Independent MacPherson strut or multi-link',
+            'Load Capacity: Designed for 400-700 kg additional weight',
+            'Damping: Adaptive or air suspension systems',
+            'Weight Distribution: Optimized for battery pack placement',
+            'Ride Quality: Enhanced comfort for heavier vehicles',
+            'Handling: Improved stability and cornering performance'
         ],
         facts: [
-            { value: '300+', label: 'Mile Range' },
-            { value: '8yr', label: 'Warranty' },
-            { value: '15min', label: 'Fast Charge' },
-            { value: '97%', label: 'Efficiency' }
+            { value: '700kg', label: 'Extra Load' },
+            { value: '50%', label: 'Stiffer Springs' },
+            { value: 'Adaptive', label: 'Damping' },
+            { value: 'Premium', label: 'Ride Quality' }
         ]
     },
     motor: {
@@ -223,7 +223,7 @@ document.addEventListener('keydown', (e) => {
     if (modal.classList.contains('active')) return;
     
     const keys = ['1', '2', '3'];
-    const components = ['battery', 'motor', 'braking'];
+    const components = ['suspension', 'motor', 'braking'];
     
     const index = keys.indexOf(e.key);
     if (index !== -1) {
