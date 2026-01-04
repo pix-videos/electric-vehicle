@@ -217,7 +217,7 @@ main {
 /* Hotspot 1: Battery Pack - bottom of the car (floor/chassis area) */
 .hotspot-battery {
     left: 64%;
-    bottom: 33%;
+    bottom: 32%;
 }
 
 /* Hotspot 2: Electric Motor - front bumper area */
