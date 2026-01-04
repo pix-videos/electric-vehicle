@@ -12,10 +12,10 @@ Place your GLB model files in this directory. The following models are needed:
 
 ### Free Models (CC0/CC-BY Licensed)
 
-1. **Sketchfab** - Search for "battery", "electric motor", "brake" models
+1. **Sketchfab** - Search for "battery", "electric motor", "tire" models
    - https://sketchfab.com/search?q=battery&type=models&features=downloadable&sort_by=-likeCount
    - https://sketchfab.com/search?q=electric+motor&type=models&features=downloadable
-   - https://sketchfab.com/search?q=brake+disc&type=models&features=downloadable
+   - https://sketchfab.com/search?q=tire+wheel&type=models&features=downloadable
 
 2. **CGTrader Free Section**
    - https://www.cgtrader.com/free-3d-models/industrial/industrial-machine/battery
