@@ -190,15 +190,25 @@ function setupViewerControls() {
         if (loadingIndicator) {
             loadingIndicator.style.display = 'none';
         }
+        // Ensure model-viewer is visible
+        viewer.style.display = 'block';
+        viewer.style.opacity = '1';
     });
     
     viewer.addEventListener('error', (e) => {
         console.error('Error loading model:', e);
+        console.error('Model path:', viewer.src);
         // Hide loading indicator even on error
         const loadingIndicator = viewer.querySelector('.model-loading');
         if (loadingIndicator) {
             loadingIndicator.style.display = 'none';
         }
+        // Show error message
+        const errorMsg = document.createElement('div');
+        errorMsg.className = 'model-error';
+        errorMsg.style.cssText = 'position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--secondary); text-align: center;';
+        errorMsg.innerHTML = '<p>Error loading model</p><p style="font-size: 0.8rem;">Check console for details</p>';
+        viewer.parentElement.appendChild(errorMsg);
     });
 }
 
