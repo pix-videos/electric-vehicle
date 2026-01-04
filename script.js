@@ -194,9 +194,15 @@ function setupViewerControls() {
     
     // Reset view
     resetViewBtn.addEventListener('click', () => {
-        viewer.cameraOrbit = 'auto auto auto';
+        // Check if current model is tire and adjust accordingly
+        if (currentComponent === 'braking') {
+            viewer.cameraOrbit = 'auto 75deg auto';
+            viewer.fieldOfView = '45deg';
+        } else {
+            viewer.cameraOrbit = 'auto auto auto';
+            viewer.fieldOfView = 'auto';
+        }
         viewer.cameraTarget = 'auto auto auto';
-        viewer.fieldOfView = 'auto';
     });
     
     // Handle model load events
