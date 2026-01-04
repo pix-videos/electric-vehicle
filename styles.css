@@ -216,21 +216,20 @@ main {
 /* Hotspot Positions - adjusted for EV cutaway diagram */
 /* Hotspot 1: Battery Pack - bottom of the car (floor/chassis area) */
 .hotspot-battery {
-    bottom: 8%;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 35%;
+    left: 65%;
 }
 
 /* Hotspot 2: Electric Motor - front bumper area */
 .hotspot-motor {
-    top: 45%;
-    left: 25%;
+    bottom: 45%;
+    left: 30%;
 }
 
 /* Hotspot 3: Regenerative Braking - front wheel */
 .hotspot-braking {
     bottom: 30%;
-    left: 22%;
+    left: 50%;
 }
 
 /* Instructions */
