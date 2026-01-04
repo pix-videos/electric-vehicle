@@ -6,7 +6,7 @@
 // Component data with 3D models and information
 const componentData = {
     suspension: {
-        number: '01',
+        number: '03',
         title: 'Car Suspension System',
         model: './models/3d-car-suspension.glb',
         description: 'The suspension system is crucial for electric vehicles, managing the increased weight from battery packs while maintaining ride comfort and handling. EV suspensions are engineered to handle higher loads, provide optimal weight distribution, and ensure smooth operation. Advanced systems use adaptive dampers and air suspension to automatically adjust for varying loads and road conditions.',
@@ -26,7 +26,7 @@ const componentData = {
         ]
     },
     motor: {
-        number: '02',
+        number: '01',
         title: 'Electric Motor',
         model: './models/3d-electric-motor.glb',
         description: 'Electric motors convert electrical energy into mechanical rotation with remarkable efficiency. Unlike combustion engines with hundreds of moving parts, electric motors have just one moving component—the rotor. This simplicity means fewer maintenance requirements and instant torque delivery.',
@@ -46,7 +46,7 @@ const componentData = {
         ]
     },
     tire: {
-        number: '03',
+        number: '02',
         title: 'EV Tires',
         model: './models/3d-tire.glb',
         description: 'Electric vehicle tires are specifically engineered to handle the unique demands of EVs. They must support heavier vehicle weights due to battery packs, provide low rolling resistance for maximum range, and deliver exceptional grip for instant torque delivery. Advanced compounds and tread patterns optimize efficiency while maintaining safety and performance.',
@@ -223,7 +223,7 @@ document.addEventListener('keydown', (e) => {
     if (modal.classList.contains('active')) return;
     
     const keys = ['1', '2', '3'];
-    const components = ['suspension', 'motor', 'tire'];
+    const components = ['motor', 'tire', 'suspension'];
     
     const index = keys.indexOf(e.key);
     if (index !== -1) {
