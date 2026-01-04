@@ -28,7 +28,7 @@ const componentData = {
     motor: {
         number: '02',
         title: 'Electric Motor',
-        model: './models/motor.glb', // Place your motor GLB model in the models/ folder
+        model: './models/3d-electric-motor.glb',
         description: 'Electric motors convert electrical energy into mechanical rotation with remarkable efficiency. Unlike combustion engines with hundreds of moving parts, electric motors have just one moving component—the rotor. This simplicity means fewer maintenance requirements and instant torque delivery.',
         specs: [
             'Type: Permanent Magnet Synchronous Motor (PMSM)',
