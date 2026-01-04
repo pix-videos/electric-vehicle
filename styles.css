@@ -372,7 +372,7 @@ model-viewer {
     to { transform: rotate(360deg); }
 }
 
-model-viewer[loaded] + .model-loading {
+model-viewer[loaded] .model-loading {
     display: none;
 }
 

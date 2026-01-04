@@ -179,10 +179,20 @@ function setupViewerControls() {
     // Handle model load events
     viewer.addEventListener('load', () => {
         console.log('Model loaded successfully');
+        // Hide loading indicator
+        const loadingIndicator = viewer.querySelector('.model-loading');
+        if (loadingIndicator) {
+            loadingIndicator.style.display = 'none';
+        }
     });
     
     viewer.addEventListener('error', (e) => {
         console.error('Error loading model:', e);
+        // Hide loading indicator even on error
+        const loadingIndicator = viewer.querySelector('.model-loading');
+        if (loadingIndicator) {
+            loadingIndicator.style.display = 'none';
+        }
     });
 }
 
