@@ -120,6 +120,12 @@ function openComponentModal(componentId) {
         </div>
     `).join('');
     
+    // Show loading indicator
+    const loadingIndicator = viewer.querySelector('.model-loading');
+    if (loadingIndicator) {
+        loadingIndicator.style.display = 'block';
+    }
+    
     // Load 3D model
     viewer.src = data.model;
     
