@@ -5,7 +5,7 @@ Place your GLB model files in this directory. The following models are needed:
 ## Required Models
 
 1. **battery.glb** - Lithium-ion battery pack model
-2. **motor.glb** - Electric motor model  
+2. **3d-electric-motor.glb** - Electric motor model  
 3. **3d-tire.glb** - EV tire model
 
 ## Recommended Sources
