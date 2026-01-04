@@ -18,10 +18,10 @@ Place your GLB model files in this directory. The following models are needed:
    - https://sketchfab.com/search?q=tire+wheel&type=models&features=downloadable
 
 2. **CGTrader Free Section**
-   - https://www.cgtrader.com/free-3d-models/industrial/industrial-machine/battery
+   - https://www.cgtrader.com/free-3d-models/automotive/car-parts/suspension
 
 3. **Free3D**
-   - https://free3d.com/3d-model/battery
+   - https://free3d.com/3d-model/suspension
 
 ## Download Instructions
 
