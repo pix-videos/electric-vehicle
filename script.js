@@ -8,7 +8,7 @@ const componentData = {
     battery: {
         number: '01',
         title: 'Lithium-Ion Battery Pack',
-        model: 'https://modelviewer.dev/shared-assets/models/Astronaut.glb', // Astronaut model from Model-Viewer examples
+        model: './models/battery.glb', // Place your battery GLB model in the models/ folder
         description: 'The battery pack is the heart of every electric vehicle, storing the electrical energy that powers the motor. Modern EV batteries use lithium-ion technology arranged in thousands of individual cells, connected in series and parallel to achieve the desired voltage and capacity.',
         specs: [
             'Capacity: 75-100 kWh (typical long-range EV)',
@@ -28,7 +28,7 @@ const componentData = {
     motor: {
         number: '02',
         title: 'Electric Motor',
-        model: 'https://modelviewer.dev/shared-assets/models/RobotExpressive.glb', // RobotExpressive model from Model-Viewer examples
+        model: './models/motor.glb', // Place your motor GLB model in the models/ folder
         description: 'Electric motors convert electrical energy into mechanical rotation with remarkable efficiency. Unlike combustion engines with hundreds of moving parts, electric motors have just one moving component—the rotor. This simplicity means fewer maintenance requirements and instant torque delivery.',
         specs: [
             'Type: Permanent Magnet Synchronous Motor (PMSM)',
@@ -48,7 +48,7 @@ const componentData = {
     braking: {
         number: '03',
         title: 'Regenerative Braking System',
-        model: 'https://modelviewer.dev/shared-assets/models/Horse.glb', // Horse model from Model-Viewer examples
+        model: './models/braking.glb', // Place your braking system GLB model in the models/ folder
         description: 'Regenerative braking is a revolutionary technology that captures kinetic energy during deceleration and converts it back to electrical energy stored in the battery. When you lift off the accelerator or apply the brakes, the motor reverses its function, becoming a generator.',
         specs: [
             'Energy Recovery: Up to 70% of kinetic energy',

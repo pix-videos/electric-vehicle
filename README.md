@@ -90,7 +90,12 @@ MIT License - feel free to use this for educational purposes.
 ## 🙏 Credits
 
 ### 3D Models
-- Sample models from [Model-Viewer Examples](https://modelviewer.dev/) (Apache 2.0 License)
+- **Required Models:** Place GLB files in the `models/` folder:
+  - `battery.glb` - Lithium-ion battery pack
+  - `motor.glb` - Electric motor
+  - `braking.glb` - Regenerative braking system
+- **Download Guide:** See `models/README.md` for recommended sources and download instructions
+- **License:** Use CC0 or CC-BY licensed models (see download guide for sources)
 
 ### Other Assets
 - **Hero Image**: [Rob Wingate on Unsplash](https://unsplash.com/@robwingate) - Jaguar Type 00 Concept
