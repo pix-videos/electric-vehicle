@@ -347,6 +347,8 @@ model-viewer {
     height: 100%;
     min-height: 400px;
     --poster-color: transparent;
+    display: block;
+    background: linear-gradient(135deg, #0d0d15 0%, #1a1a2e 100%);
 }
 
 .model-loading {
