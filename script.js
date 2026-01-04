@@ -129,6 +129,10 @@ function openComponentModal(componentId) {
     // Load 3D model
     viewer.src = data.model;
     
+    // Ensure auto-rotate is enabled with no delay
+    viewer.setAttribute('auto-rotate', '');
+    viewer.setAttribute('auto-rotate-delay', '0');
+    
     // Show modal
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
