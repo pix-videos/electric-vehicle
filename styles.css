@@ -215,19 +215,19 @@ main {
 
 /* Hotspot Positions - adjusted for EV cutaway diagram */
 .hotspot-battery {
-    bottom: 15%;
+    bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .hotspot-motor {
-    bottom: 20%;
-    right: 20%;
+    bottom: 25%;
+    right: 15%;
 }
 
 .hotspot-braking {
-    bottom: 18%;
-    left: 20%;
+    bottom: 22%;
+    left: 15%;
 }
 
 /* Instructions */
